@@ -5,12 +5,13 @@ async function purchase(){
         let res = await fetch(`https://masai-vouchers-api.herokuapp.com/api/vouchers`)
         //console.log(res)
         let data = await res.json()
-        console.log("data:",data.vouchers)
-        append(data)
+        console.log("data:",data)
+        
 
-        // let voucherData = data.vouchers
-        // console.log("voucherData:",voucherData)
+        let voucherData = data[0].vouchers
+        console.log("voucherData:",voucherData)
         //return voucherData
+        append(voucherData)
 
         
         
